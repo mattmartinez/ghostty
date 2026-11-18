@@ -463,7 +463,7 @@ pub const Action = union(Key) {
             msg: ?[*:0]const u8,
         };
 
-        pub fn cval(self: ProgramStatus) C {
+        pub fn cval(self: ProgramStatus) ProgramStatus.C {
             return .{
                 .event = self.event,
                 .state = self.state,
